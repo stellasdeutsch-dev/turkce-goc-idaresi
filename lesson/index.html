@@ -574,6 +574,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 @media(min-width:760px){.cards.c3{grid-template-columns:repeat(3,1fr)}.colr h3{max-width:100%}}
 @media(min-width:1024px){.hero-art{--h:500px}}
 .colr{padding-bottom:128px}
+
+.rshots{columns:1;column-gap:12px;margin-top:24px}.rs{break-inside:avoid;margin:0 0 12px;background:var(--white);border-radius:22px;overflow:hidden;transition:translate .25s,box-shadow .25s}.rs:hover{translate:0 -3px;box-shadow:0 12px 26px rgba(40,50,48,.08)}.rs img{width:100%}.rs span{display:block;padding:10px 16px 12px;font-weight:600}.rs.more{display:none}
+@media(min-width:640px){.rshots{columns:2}}@media(min-width:1024px){.rshots{columns:3}}
 </style>
 <script defer src="../assets/gsap-bundle.min.js"></script>
 </head>
@@ -1191,6 +1194,7 @@ X.forEach(function(x,i){var el=document.createElement('div');el.className='xq';v
 
 
 
+(function(){var b=$('#rMore');if(!b)return;b.onclick=function(){$$('#rshots .more').forEach(function(x){x.classList.remove('more')});b.parentNode.style.display='none';if(window.ScrollTrigger)ScrollTrigger.refresh()}})();
 /* lazy video */
 (function(){var V=$$('video.lz');if(!V.length||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){if(!v.src){v.src=v.dataset.src}v.muted=true;if(!RM){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else{v.pause()}})},{rootMargin:'200px'});V.forEach(function(v){io.observe(v)})})();
 

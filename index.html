@@ -574,6 +574,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 @media(min-width:760px){.cards.c3{grid-template-columns:repeat(3,1fr)}.colr h3{max-width:100%}}
 @media(min-width:1024px){.hero-art{--h:500px}}
 .colr{padding-bottom:128px}
+
+.rshots{columns:1;column-gap:12px;margin-top:24px}.rs{break-inside:avoid;margin:0 0 12px;background:var(--white);border-radius:22px;overflow:hidden;transition:translate .25s,box-shadow .25s}.rs:hover{translate:0 -3px;box-shadow:0 12px 26px rgba(40,50,48,.08)}.rs img{width:100%}.rs span{display:block;padding:10px 16px 12px;font-weight:600}.rs.more{display:none}
+@media(min-width:640px){.rshots{columns:2}}@media(min-width:1024px){.rshots{columns:3}}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -1102,13 +1105,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
   </div>
 
   <h3 class="mt2">Немного <span class="g">из личных сообщений</span></h3>
-  <div class="revs">
-    <div class="rvw rv"><div class="rvw-h"><span class="av">Э</span><b>Элина</b></div><p>Турецкий на слух я выучила. Понимать понимала, но говорить не говорила… Сейчас разбираю грамматику и уже понимаю, почему я отвечаю именно так. Сразу появилась уверенность, и вести диалоги стало легче. Сразу барьер прошёл.</p></div>
-    <div class="rvw rv"><div class="rvw-h"><span class="av">Д</span><b>Дарья</b></div><p>Занимаюсь с репетитором, но в пользу занятости получается раз в неделю. Так что ваши материалы отлично использую в качестве доп. материалов… Очень нравится подача через личные истории, это смешно и помогает легче запомнить информацию.</p></div>
-    <div class="rvw rv"><div class="rvw-h"><span class="av">Н</span><b>Наталья</b></div><p>Создать площадку с уровня A0 до уровня C1 с такой огромнейшей базой… Задействованы все составляющие: и лексика, и грамматика, а практическое применение чтения, слушания, разговорной речи и письма.</p></div>
-    <div class="rvw rv"><div class="rvw-h"><span class="av">А</span><b>Алиса</b></div><p>Я несколько раз начинала учить турецкий язык и каждый раз говорила себе: зачем мне это нужно? Но благодаря вам я каждый день изучаю что-то новое… Всё проходит весело, непринуждённо.</p></div>
-  </div>
-  <p class="fine">Сентябрь и октябрь 2026. Сокращено, текст не менялся.</p>
+  <div class="rshots" id="rshots"><figure class="rs"><img src="media/rv9.webp" alt="Отзыв Элины: появилась уверенность, барьер прошёл" loading="lazy"><span>Элина</span></figure><figure class="rs"><img src="media/rv2.webp" alt="Отзыв: по тренажёрам подготовилась к встрече, и на ней были такие вопросы" loading="lazy"></figure><figure class="rs"><img src="media/rv8.webp" alt="Отзыв Алисы: несколько раз начинала учить турецкий, теперь занимается каждый день" loading="lazy"><span>Алиса</span></figure><figure class="rs"><img src="media/rv6.webp" alt="Отзыв: здесь вижу и скорость, и результат, и удовольствие от процесса" loading="lazy"></figure><figure class="rs"><img src="media/rv11.webp" alt="Отзыв Дарьи: подача через личные истории помогает запомнить" loading="lazy"><span>Дарья</span></figure><figure class="rs"><img src="media/rv5.webp" alt="Отзыв: материалы распределены по уровням, объяснения понятные и с примерами" loading="lazy"></figure><figure class="rs more"><img src="media/rv10.webp" alt="Отзыв Натальи: задействованы лексика, грамматика, чтение, слушание и письмо" loading="lazy"><span>Наталья</span></figure><figure class="rs more"><img src="media/rv7.webp" alt="Отзыв: лучший старт в турецкий, благодарность за чёткость и структуру" loading="lazy"></figure><figure class="rs more"><img src="media/rv1.webp" alt="Отзыв: платформа отличная, много материала, подобран по уровням" loading="lazy"></figure><figure class="rs more"><img src="media/rv3.webp" alt="Отзыв: всё продумано и структурировано, есть всё необходимое для уровня" loading="lazy"></figure></div>
+  <div class="btns" style="margin-top:12px"><button class="btn mint" id="rMore" type="button">Показать все отзывы</button></div>
+  <p class="fine">Скриншоты настоящих переписок. Фамилии и фотографии убраны.</p>
 
   <div class="price" id="price">
     <div>
@@ -1335,6 +1334,7 @@ var once=false,io=new IntersectionObserver(function(en){en.forEach(function(x){i
 })();
 
 
+(function(){var b=$('#rMore');if(!b)return;b.onclick=function(){$$('#rshots .more').forEach(function(x){x.classList.remove('more')});b.parentNode.style.display='none';if(window.ScrollTrigger)ScrollTrigger.refresh()}})();
 /* lazy video */
 (function(){var V=$$('video.lz');if(!V.length||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(en){en.forEach(function(x){var v=x.target;if(x.isIntersecting){if(!v.src){v.src=v.dataset.src}v.muted=true;if(!RM){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else{v.pause()}})},{rootMargin:'200px'});V.forEach(function(v){io.observe(v)})})();
 
