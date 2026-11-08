@@ -575,6 +575,30 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 @media(min-width:1024px){.hero-art{--h:500px}}
 .colr{padding-bottom:128px}
 
+/* topic visuals */
+.vz{margin:26px 0 0;background:var(--white);border-radius:var(--r);padding:16px;display:grid;gap:18px;transition:translate .25s,box-shadow .25s}
+.vz:hover{translate:0 -3px;box-shadow:0 12px 26px rgba(40,50,48,.08)}
+.vz.m{background:var(--mint-t)}.vz.l{background:var(--lilac-t)}.vz.c{background:var(--coral-t)}
+.vz-a{width:100%;height:auto;border-radius:20px}
+.vz-o{position:relative;min-width:0}
+.vz-p{max-width:300px;width:100%;justify-self:center}
+.vz .ov{position:absolute;translate:-50% -50%;font-weight:600;font-size:clamp(13px,1.7vw,17px);line-height:1;white-space:nowrap;hyphens:none;color:var(--ink)}
+.vz .ov.w{color:#fff}
+.vz-c{display:grid;gap:10px;align-content:center;min-width:0}
+.vz-t{font-weight:500;font-size:clamp(20px,2.2vw,24px);line-height:1.22;letter-spacing:-.01em;hyphens:manual}
+.vz-r{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.3;color:var(--mute)}
+.vz-r .tr,.vz-r .tw{color:var(--ink);font-size:17px}
+.vz-r .tw{white-space:normal}
+.vz-k{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex:none;font-weight:600;font-size:15px;line-height:1;color:#fff;background:var(--slate)}
+.vz-k .ic{font-size:20px}
+.vz-chips{display:flex;flex-wrap:wrap;gap:6px}
+.vz-chips span{background:var(--paper);border-radius:999px;padding:6px 12px;font-size:15.5px;font-weight:600;line-height:1.2;hyphens:none}
+.vz.m .vz-chips span{background:var(--white)}
+.vz-chips span.no,.vz.m .vz-chips span.no{background:var(--coral);color:#fff}
+.vz .bob{transform-box:fill-box;transform-origin:50% 50%;animation:vz-bob 3.4s ease-in-out infinite}
+@keyframes vz-bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(min-width:760px){.vz{grid-template-columns:1.3fr 1fr;align-items:center;gap:34px;padding:26px}.vz-p{max-width:320px}}
+
 .rshots{columns:1;column-gap:12px;margin-top:24px}.rs{break-inside:avoid;margin:0 0 12px;background:var(--white);border-radius:22px;overflow:hidden;transition:translate .25s,box-shadow .25s}.rs:hover{translate:0 -3px;box-shadow:0 12px 26px rgba(40,50,48,.08)}.rs img{width:100%}.rs span{display:block;padding:10px 16px 12px;font-weight:600}.rs.more{display:none}
 @media(min-width:640px){.rshots{columns:2}}@media(min-width:1024px){.rshots{columns:3}}
 </style>
@@ -721,6 +745,24 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
     <div class="tile" role="button" tabindex="0" aria-label="Перевернуть"><div class="tile-in"><div class="tile-f"><b lang="tr">tercüme</b><svg class="ic ti"><use href="#lang"/></svg><button class="say" data-say="tercüme" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button></div><div class="tile-b"><b>перевод документа</b><small>Нажми, чтобы вернуть</small><p class="tr" lang="tr">Tercüme hazır.</p><small>Перевод готов.</small></div></div></div>
     <div class="tile cor" role="button" tabindex="0" aria-label="Перевернуть"><div class="tile-in"><div class="tile-f"><b lang="tr">eksik</b><svg class="ic ti"><use href="#miss"/></svg><button class="say" data-say="eksik" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button></div><div class="tile-b"><b>не хватает, неполный</b><small>Нажми, чтобы вернуть</small><p class="tr" lang="tr">Evrak eksik.</p><small>Не хватает документов.</small></div></div></div>
   </div>
+  <figure class="vz m" data-vz>
+    <svg class="vz-a" viewBox="0 0 640 390" role="img" aria-label="Открытая папка с документами, на месте одной бумаги пустой контур">
+      <rect width="640" height="390" fill="#BFE8DA"/>
+      <rect y="312" width="640" height="78" fill="#A6DBC8"/>
+      <path d="M44 138a16 16 0 0 1 16-16h170l30 32h320a16 16 0 0 1 16 16v152a16 16 0 0 1-16 16H60a16 16 0 0 1-16-16z" fill="#F2C44E"/>
+      <g data-v><g transform="rotate(-8 112 170)"><rect x="60" y="98" width="104" height="146" rx="10" fill="#6E9FCB"/><circle cx="112" cy="156" r="26" fill="none" stroke="#fff" stroke-width="5"/><path d="M90 156h44M112 130c-16 16-16 36 0 52M112 130c16 16 16 36 0 52" fill="none" stroke="#fff" stroke-width="3"/><rect x="86" y="202" width="52" height="9" rx="4.500" fill="#fff"/></g></g>
+      <g data-v><g transform="rotate(4 228 196)"><rect x="166" y="150" width="130" height="92" rx="10" fill="#fff"/><rect x="178" y="164" width="40" height="52" rx="6" fill="#56B595"/><circle cx="198" cy="182" r="9" fill="#fff"/><path d="M184 210c3-11 9-14 14-14s11 3 14 14z" fill="#fff"/><rect x="226" y="170" width="58" height="8" rx="4" fill="#C9C9D0"/><rect x="226" y="186" width="44" height="8" rx="4" fill="#C9C9D0"/><rect x="226" y="202" width="52" height="8" rx="4" fill="#C9C9D0"/></g></g>
+      <g data-v><g transform="rotate(-3 356 170)"><rect x="304" y="86" width="106" height="150" rx="10" fill="#fff"/><path d="M357 104l28 11v22c0 20-12 33-28 40-16-7-28-20-28-40v-22z" fill="#A07FE6"/><path d="m345 138 9 9 16-18" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="326" y="194" width="62" height="8" rx="4" fill="#C9C9D0"/><rect x="326" y="210" width="44" height="8" rx="4" fill="#C9C9D0"/></g></g>
+      <g data-v><g transform="rotate(5 484 168)"><rect x="424" y="82" width="116" height="160" rx="10" fill="#fff"/><rect x="424" y="82" width="116" height="30" rx="10" fill="#56B595"/><rect x="424" y="100" width="116" height="12" fill="#56B595"/><rect x="442" y="130" width="80" height="8" rx="4" fill="#C9C9D0"/><rect x="442" y="148" width="80" height="8" rx="4" fill="#C9C9D0"/><rect x="442" y="166" width="56" height="8" rx="4" fill="#C9C9D0"/><path d="M444 216c10-16 18-18 22-8s10 10 16-2 12-8 16 6" fill="none" stroke="#55555F" stroke-width="4" stroke-linecap="round"/></g></g>
+      <g data-v class="bob"><rect x="546" y="60" width="74" height="104" rx="10" fill="#fff" stroke="#F5806E" stroke-width="4" stroke-dasharray="11 9"/><circle cx="583" cy="112" r="20" fill="#F5806E"/><path d="M583 99v15M583 122v2" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+      <path d="M44 244a16 16 0 0 1 16-16h520a16 16 0 0 1 16 16v94a16 16 0 0 1-16 16H60a16 16 0 0 1-16-16z" fill="#F8D26A"/>
+      <rect x="270" y="262" width="100" height="22" rx="11" fill="#F2C44E"/>
+    </svg>
+    <div class="vz-c">
+      <p class="vz-t">Папка у окна. Одной бумаги нет.</p>
+      <div class="vz-chips" lang="tr"><span>pasaport</span><span>kimlik</span><span>sigorta</span><span>başvuru formu</span><span class="no">harç dekontu eksik</span></div>
+    </div>
+  </figure>
 </div></section>
 
 <section id="kak"><div class="wrap">
@@ -767,6 +809,30 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       <div class="cd rv"><h4>Вагон из двух</h4><div class="vw"><span>a</span><span>ı</span><span>o</span><span>u</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">a</span></div><div class="vw"><span>e</span><span>i</span><span>ö</span><span>ü</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">e</span></div></div>
       <div class="cd rv"><h4>Вагон из четырёх</h4><div class="vw"><span>a</span><span>ı</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">ı</span><span style="margin-left:14px">e</span><span>i</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">i</span></div><div class="vw"><span>o</span><span>u</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">u</span><span style="margin-left:14px">ö</span><span>ü</span><span class="ar"><svg class="ic"><use href="#arrow"/></svg></span><span class="res">ü</span></div></div>
     </div>
+    <figure class="vz l" data-vz>
+      <div class="vz-o">
+        <svg class="vz-a" viewBox="0 0 640 330" role="img" aria-label="Рельсы расходятся на две ветки, последняя гласная переводит стрелку">
+          <rect width="640" height="330" fill="#EEE7FB"/>
+          <g fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"><path d="M0 200H210C290 200 310 92 400 92H640"/><path d="M0 200H210C290 200 310 276 400 276H640"/></g>
+          <g fill="none" stroke="#55555F" stroke-width="4" stroke-linecap="round"><path data-draw d="M0 200H210C290 200 310 92 400 92H640"/></g>
+          <g fill="none" stroke="#55555F" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"><path d="M0 200H210C290 200 310 276 400 276H640"/></g>
+          <g data-v><rect x="36" y="112" width="74" height="82" rx="14" fill="#fff"/><rect x="60" y="146" width="150" height="48" rx="16" fill="#fff"/><rect x="150" y="116" width="24" height="34" rx="6" fill="#55555F"/><rect x="48" y="124" width="44" height="26" rx="6" fill="#BFE8DA"/><g fill="#55555F"><circle cx="82" cy="200" r="13"/><circle cx="168" cy="200" r="13"/></g></g>
+          <g data-v><path d="M250 214V118" stroke="#55555F" stroke-width="8" stroke-linecap="round"/><path d="M254 74h120l18 20-18 20H254z" fill="#56B595"/><path d="M254 124h120l18 20-18 20H254z" fill="#A07FE6"/></g>
+          <g data-v><rect x="474" y="34" width="124" height="52" rx="12" fill="#F5806E"/><g fill="#55555F"><circle cx="502" cy="92" r="12"/><circle cx="570" cy="92" r="12"/></g></g>
+          <g data-v><rect x="474" y="218" width="124" height="52" rx="12" fill="#F7B0A5"/><g fill="#55555F"><circle cx="502" cy="276" r="12"/><circle cx="570" cy="276" r="12"/></g></g>
+        </svg>
+        <span class="ov" style="left:20.600%;top:51.500%" lang="tr">memur</span>
+        <span class="ov w" style="left:49.500%;top:28.500%" lang="tr">a ı o u</span>
+        <span class="ov w" style="left:49.500%;top:43.500%" lang="tr">e i ö ü</span>
+        <span class="ov w" style="left:83.800%;top:18.200%" lang="tr">a</span>
+        <span class="ov" style="left:83.800%;top:74%" lang="tr">e</span>
+      </div>
+      <div class="vz-c">
+        <p class="vz-t">Последняя гласная переводит стрелку</p>
+        <div class="vz-r"><span class="vz-k" style="background:var(--mint)" lang="tr">a</span><span>После <b lang="tr">a ı o u</b> вагон <span class="tw" lang="tr"><i class="r">memur</i><i class="c">a</i></span></span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--lilac)" lang="tr">e</span><span>После <b lang="tr">e i ö ü</b> вагон <span class="tw" lang="tr"><i class="r">noter</i><i class="c">e</i></span></span></div>
+      </div>
+    </figure>
     <div class="ban m">
       <h3>Проверь <span class="g2">любое слово</span></h3>
       <p>Впиши турецкое слово. Последняя гласная сама выберет вагон.</p>
@@ -818,6 +884,32 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       </div>
       <div class="dots"></div>
     </div></div>
+    <figure class="vz" data-vz>
+      <div class="vz-o">
+        <svg class="vz-a" viewBox="0 0 640 400" role="img" aria-label="Здание миграционной службы: один человек идёт к двери, второй ждёт внутри, третий выходит">
+          <rect width="640" height="400" fill="#E4F4EE"/>
+          <rect y="320" width="640" height="80" fill="#BFE8DA"/>
+          <path d="M0 356H640" stroke="#fff" stroke-width="10" stroke-dasharray="26 22"/>
+          <g data-v><rect x="170" y="86" width="300" height="234" fill="#A07FE6"/><rect x="154" y="68" width="332" height="26" rx="8" fill="#55555F"/>
+            <rect x="238" y="104" width="164" height="36" rx="8" fill="#fff"/>
+            <rect x="192" y="158" width="118" height="110" rx="10" fill="#fff"/>
+            <path d="M210 234h82v12h-82z" fill="#F8D26A"/>
+            <circle cx="252" cy="192" r="14" fill="#55555F"/><path d="M230 234c2-16 12-26 22-26s20 10 22 26z" fill="#F5806E"/><path d="M226 268v-22h52v22" fill="none" stroke="#55555F" stroke-width="6"/>
+            <rect x="342" y="178" width="92" height="142" rx="8" fill="#55555F"/><rect x="352" y="190" width="72" height="130" rx="4" fill="#BFE8DA"/><circle cx="412" cy="258" r="5" fill="#55555F"/></g>
+          <g data-v><circle cx="86" cy="248" r="20" fill="#55555F"/><path d="M62 330l6-54c2-12 12-18 18-18s16 6 18 18l6 54z" fill="#F5806E"/></g>
+          <g data-v><path d="M118 300h42" stroke="#F5806E" stroke-width="7" stroke-linecap="round"/><path d="m148 286 16 14-16 14" fill="none" stroke="#F5806E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g data-v><circle cx="540" cy="248" r="20" fill="#55555F"/><path d="M516 330l6-54c2-12 12-18 18-18s16 6 18 18l6 54z" fill="#F8D26A"/></g>
+          <g data-v><path d="M474 300h44" stroke="#F2C44E" stroke-width="7" stroke-linecap="round"/><path d="m506 286 16 14-16 14" fill="none" stroke="#F2C44E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg>
+        <span class="ov" style="left:50%;top:30.500%" lang="tr">Göç İdaresi</span>
+      </div>
+      <div class="vz-c">
+        <p class="vz-t">Одно здание, три вагона</p>
+        <div class="vz-r"><span class="vz-k" style="background:var(--coral)"><svg class="ic"><use href="#walk"/></svg></span><span>Куда: <span class="tw" lang="tr"><i class="r">Göç İdare</i><i class="p">si</i><i class="b">n</i><i class="c">e</i></span></span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--lilac)"><svg class="ic"><use href="#bld"/></svg></span><span>Где: <span class="tw" lang="tr"><i class="r">Göç İdare</i><i class="p">si</i><i class="b">n</i><i class="c">de</i></span></span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--yellow-d);color:var(--ink)"><svg class="ic"><use href="#arrow"/></svg></span><span>Откуда: <span class="tw" lang="tr"><i class="r">Göç İdare</i><i class="p">si</i><i class="b">n</i><i class="c">den</i></span></span></div>
+      </div>
+    </figure>
     <p class="lead">Буква <span class="tw" lang="tr"><i class="b">n</i></span> появляется после <span class="tw" lang="tr"><i class="p">si</i></span>: это просто связка. Теперь все учреждения разом.</p>
     <div class="sw" id="plSw"><button class="on" data-v="0">Куда</button><button data-v="1">Где</button><button data-v="2">Откуда</button></div>
     <div class="pplc" id="plG"></div>
@@ -856,6 +948,23 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       </div>
       <div class="dots"></div>
     </div></div>
+    <figure class="vz l" data-vz>
+      <svg class="vz-a" viewBox="0 0 640 390" role="img" aria-label="Пустой кабинет: на столе лежит анкета, ручка заполняет её сама, сотрудника на месте нет">
+        <rect width="640" height="390" fill="#EEE7FB"/>
+        <rect y="296" width="640" height="94" fill="#DCD0F3"/>
+        <g data-v><rect x="60" y="56" width="150" height="104" rx="12" fill="#fff"/><path d="M84 88h102M84 110h102M84 132h60" stroke="#C9C9D0" stroke-width="8" stroke-linecap="round"/></g>
+        <g data-v><path d="M258 128c0-30 28-50 62-50s62 20 62 50-26 54-62 54-62-24-62-54z" fill="none" stroke="#F5806E" stroke-width="4" stroke-dasharray="11 9"/><path d="M226 300c6-66 46-100 94-100s88 34 94 100" fill="none" stroke="#F5806E" stroke-width="4" stroke-dasharray="11 9"/></g>
+        <rect x="120" y="284" width="400" height="20" rx="8" fill="#55555F"/>
+        <g fill="#55555F"><rect x="146" y="304" width="16" height="72"/><rect x="478" y="304" width="16" height="72"/></g>
+        <g data-v><rect x="232" y="238" width="176" height="46" rx="8" fill="#fff"/><path d="M252 256h100M252 270h64" stroke="#56B595" stroke-width="6" stroke-linecap="round" data-draw/><rect x="372" y="250" width="24" height="24" rx="6" fill="#F8D26A"/></g>
+        <g class="bob"><g transform="rotate(38 430 186)"><rect x="418" y="120" width="24" height="122" rx="7" fill="#F2C44E"/><rect x="418" y="120" width="24" height="24" rx="7" fill="#F5806E"/><path d="M418 242l12 30 12-30z" fill="#55555F"/></g></g>
+      </svg>
+      <div class="vz-c">
+        <p class="vz-t">Человека нет. Анкета заполняется.</p>
+        <div class="vz-r"><span class="vz-k" style="background:var(--coral)"><svg class="ic"><use href="#person"/></svg></span><span><span class="tw" lang="tr"><i class="r">Memur</i> <i class="r">form</i><i class="c">u</i> <i class="r">doldur</i><i class="t">ur</i></span><br>Сотрудник заполняет анкету.</span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--lilac)"><svg class="ic"><use href="#pen"/></svg></span><span><span class="tw" lang="tr"><i class="r">Form</i> <i class="r">doldur</i><i class="v">ul</i><i class="t">ur</i></span><br>Анкета заполняется.</span></div>
+      </div>
+    </figure>
     <p class="lead">Какой вагон выбрать, решает конец корня.</p>
     <div class="sw" id="pasSw"><button class="on" data-v="0">После согласной</button><button data-v="1">После гласной</button><button data-v="2">После l</button><button data-v="3">Глагол etmek</button></div>
     <div class="exs c2" id="pasG"></div>
@@ -872,6 +981,26 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       <div class="tr-row rw"><div class="f" lang="tr">-malı / -meli</div><div class="w">Должен. Правило для конкретного человека.</div><div class="e"><div class="ex"><button class="say" data-say="Pasaportunuzu getirmelisiniz." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">Pasaport</i><i class="p">unuz</i><i class="c">u</i> <i class="r">getir</i><i class="v">meli</i><i class="e">siniz</i>.</p><p class="ru">Вы должны принести паспорт.</p></div></div></div></div>
       <div class="tr-row rw"><div class="f" lang="tr">zorunludur</div><div class="w">В письменных правилах. Без вариантов.</div><div class="e"><div class="ex"><button class="say" data-say="Sağlık sigortası zorunludur." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">Sağlık</i> <i class="r">sigorta</i><i class="b">s</i><i class="p">ı</i> <i class="r">zorunlu</i><i class="b">dur</i>.</p><p class="ru">Медицинская страховка обязательна.</p></div></div></div></div>
     </div>
+    <figure class="vz" data-vz>
+      <svg class="vz-a" viewBox="0 0 480 290" role="img" aria-label="Шкала строгости от мягкого к строгому, стрелка стоит на самом строгом делении">
+        <rect width="480" height="290" fill="#E4F4EE"/>
+        <g fill="none" stroke-width="38" stroke-linecap="butt">
+          <path d="M60 256A180 180 0 0 1 112.700 128.700" stroke="#56B595"/>
+          <path d="M112.700 128.700A180 180 0 0 1 240 76" stroke="#F8D26A"/>
+          <path d="M240 76A180 180 0 0 1 367.300 128.700" stroke="#A07FE6"/>
+          <path d="M367.300 128.700A180 180 0 0 1 420 256" stroke="#F5806E"/>
+        </g>
+        <g data-spin="-138" data-o="240 256"><path d="M240 244 378 196 240 268z" fill="#55555F"/></g>
+        <circle cx="240" cy="256" r="26" fill="#55555F"/><circle cx="240" cy="256" r="10" fill="#fff"/>
+      </svg>
+      <div class="vz-c">
+        <p class="vz-t">От мягкого к строгому</p>
+        <div class="vz-r"><span class="vz-k" style="background:var(--mint)">1</span><b lang="tr" class="tr">lazım</b></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--yellow-d);color:var(--ink)">2</span><b lang="tr" class="tr">-ması gerekiyor</b></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--lilac)">3</span><b lang="tr" class="tr">-malı / -meli</b></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--coral)">4</span><b lang="tr" class="tr">zorunludur</b></div>
+      </div>
+    </figure>
     <p class="lead">Кому нужно, показывает вагон после <span class="tw" lang="tr"><i class="v">ma</i></span>.</p>
     <div class="sw" id="mustSw"><button class="on" data-v="2">Вам</button><button data-v="0">Мне</button><button data-v="1">Тебе</button><button data-v="3">Нам</button></div>
     <div class="bld-o" id="mustO"></div>
@@ -919,6 +1048,27 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       <div class="ex"><button class="say" data-say="Başvurunuz değerlendirilmektedir." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">Başvuru</i><i class="p">nuz</i> <i class="r">değerlendir</i><i class="v">il</i><i class="t">mektedir</i>.</p><p class="ru">Ваше заявление рассматривается.</p></div></div>
       <div class="ex"><button class="say" data-say="Başvurunuz reddedilmiştir." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">Başvuru</i><i class="p">nuz</i> <i class="r">redded</i><i class="v">il</i><i class="t">miştir</i>.</p><p class="ru">Ваше заявление отклонено. Лучше не получать.</p></div></div>
     </div>
+    <figure class="vz c" data-vz>
+      <svg class="vz-a vz-p" viewBox="0 0 320 470" role="img" aria-label="Телефон с сообщениями о заявлении: принято, рассматривается, дальше одобрено или отклонено">
+        <rect x="30" y="8" width="260" height="454" rx="44" fill="#55555F"/>
+        <rect x="44" y="24" width="232" height="422" rx="30" fill="#fff"/>
+        <rect x="126" y="36" width="68" height="10" rx="5" fill="#C9C9D0"/>
+        <g data-v><rect x="64" y="66" width="190" height="62" rx="18" fill="#E4F4EE"/><circle cx="92" cy="97" r="17" fill="#56B595"/><path d="M85 88h14M85 97h14M85 106h9" stroke="#fff" stroke-width="3.500" stroke-linecap="round"/><rect x="118" y="86" width="116" height="9" rx="4.500" fill="#BFE8DA"/><rect x="118" y="103" width="84" height="9" rx="4.500" fill="#BFE8DA"/></g>
+        <path d="M160 128v36" stroke="#C9C9D0" stroke-width="6" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <g data-v><rect x="64" y="164" width="190" height="62" rx="18" fill="#FBEBB9"/><circle cx="92" cy="195" r="17" fill="#F2C44E"/><path d="M92 185v11l7 5" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/><rect x="118" y="184" width="116" height="9" rx="4.500" fill="#F8D26A"/><rect x="118" y="201" width="84" height="9" rx="4.500" fill="#F8D26A"/></g>
+        <path d="M160 226c0 30-48 22-48 54M160 226c0 30 48 22 48 54" fill="none" stroke="#C9C9D0" stroke-width="6" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <g data-v><rect x="62" y="282" width="94" height="104" rx="18" fill="#E4F4EE"/><circle cx="109" cy="334" r="26" fill="#56B595"/><path d="m98 335 8 9 16-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g data-v><rect x="164" y="282" width="94" height="104" rx="18" fill="#FFE6E1"/><circle cx="211" cy="334" r="26" fill="#F5806E"/><path d="m202 325 18 18m0-18-18 18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+        <rect x="118" y="416" width="84" height="8" rx="4" fill="#C9C9D0"/>
+      </svg>
+      <div class="vz-c">
+        <p class="vz-t">Вся история в четырёх SMS</p>
+        <div class="vz-r"><span class="vz-k" style="background:var(--mint)"><svg class="ic"><use href="#doc"/></svg></span><span><span class="tw" lang="tr"><i class="r">al</i><i class="v">ın</i><i class="t">mıştır</i></span> принято</span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--yellow-d);color:var(--ink)"><svg class="ic"><use href="#clock"/></svg></span><span><span class="tw" lang="tr"><i class="r">değerlendir</i><i class="v">il</i><i class="t">mektedir</i></span> рассматривается</span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--mint-d)"><svg class="ic"><use href="#tick"/></svg></span><span><span class="tw" lang="tr"><i class="r">onayla</i><i class="v">n</i><i class="t">mıştır</i></span> одобрено</span></div>
+        <div class="vz-r"><span class="vz-k" style="background:var(--coral)"><svg class="ic"><use href="#cross"/></svg></span><span><span class="tw" lang="tr"><i class="r">redded</i><i class="v">il</i><i class="t">miştir</i></span> отклонено</span></div>
+      </div>
+    </figure>
     <div class="chk" data-a="0"><p class="q">Пришло SMS: Başvurunuz alınmıştır. Что случилось?</p><div class="opts"><button class="opt" lang="tr">Заявление приняли</button><button class="opt" lang="tr">Заявление потеряли</button><button class="opt" lang="tr">Нужно прийти завтра</button></div><div class="why" data-why="alın это пассив от al, то есть брать. mıştır в официальном письме значит: сделано и зафиксировано."><p></p><div class="ex" style="background:var(--mint-t);margin-top:10px"><button class="say" data-say="Başvurunuz alınmıştır." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr">Başvurunuz alınmıştır.</p><p class="ru">Ваше заявление принято.</p></div></div></div></div>
   </div>
 
@@ -964,6 +1114,25 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 
 <section id="iskl"><div class="wrap">
   <h2>Исключения <span class="g">куда без них</span></h2>
+  <figure class="vz c" data-vz>
+    <svg class="vz-a" viewBox="0 0 640 320" role="img" aria-label="Слово izin: вторая i выпадает вниз, приходит вагон im, получается iznim">
+      <rect width="640" height="320" fill="#FFE6E1"/>
+      <g font-family="Onest,sans-serif" font-weight="600" font-size="62" text-anchor="middle" dominant-baseline="central">
+        <g data-v><rect x="36" y="46" width="96" height="104" rx="18" fill="#fff"/><text x="84" y="98" fill="#3F4045">i</text></g>
+        <g data-v><rect x="140" y="46" width="96" height="104" rx="18" fill="#fff"/><text x="188" y="98" fill="#3F4045">z</text></g>
+        <rect x="244" y="46" width="96" height="104" rx="18" fill="none" stroke="#F5806E" stroke-width="4" stroke-dasharray="11 9"/>
+        <g data-v><rect x="348" y="46" width="96" height="104" rx="18" fill="#fff"/><text x="396" y="98" fill="#3F4045">n</text></g>
+        <g data-v><rect x="470" y="46" width="136" height="104" rx="18" fill="#A07FE6"/><text x="538" y="98" fill="#fff">im</text></g>
+        <g class="bob"><g transform="rotate(-14 292 240)"><rect x="244" y="188" width="96" height="104" rx="18" fill="#F5806E"/><text x="292" y="240" fill="#fff">i</text></g></g>
+      </g>
+      <path d="M292 158v22" stroke="#F5806E" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <div class="vz-c">
+      <p class="vz-t">Приходит вагон с гласной, гласная в корне выпадает</p>
+      <div class="vz-r"><span class="vz-k" style="background:var(--coral)">1</span><span><span class="tw" lang="tr"><i class="r">izin</i></span> становится <span class="tw" lang="tr"><i class="r">izn</i><i class="p">im</i></span></span></div>
+      <div class="vz-r"><span class="vz-k" style="background:var(--lilac)">2</span><span><span class="tw" lang="tr"><i class="r">isim</i></span> становится <span class="tw" lang="tr"><i class="r">ism</i><i class="p">im</i></span></span></div>
+    </div>
+  </figure>
   <p class="lead">Их немного. Зато половина живёт именно в госуслугах.</p>
   <div class="cards c3">
     <div class="cd rv"><h4>Гласная выпадает</h4><p>Приходит вагон с гласной, и гласная в корне исчезает.</p><div class="exs"><div class="ex"><button class="say" data-say="izin → iznim" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">izin</i> → <i class="r">izn</i><i class="p">im</i></p><p class="ru">разрешение → моё разрешение</p></div></div><div class="ex"><button class="say" data-say="kayıt → kaydım" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">kayıt</i> → <i class="r">kay</i><i class="s">d</i><i class="p">ım</i></p><p class="ru">регистрация → моя регистрация</p></div></div><div class="ex"><button class="say" data-say="isim → ismim" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr"><i class="r">isim</i> → <i class="r">ism</i><i class="p">im</i></p><p class="ru">имя → моё имя</p></div></div></div></div>
@@ -994,6 +1163,24 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
     <div class="ln-d me rv"><button class="say sm" data-say="Bir şey değil. Sıradaki!" aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div class="bub"><p class="tr" lang="tr"><i class="r">Bir</i> <i class="r">şey</i> <i class="r">değil</i>. <i class="r">Sıra</i><i class="c">daki</i>!</p><p class="ru">Не за что. Следующий!</p></div></div>
   </div>
   <p class="big-p rv">Окно номер семь закрылось. <span class="g">Но теперь понятно всё. Даже то, что завтра приходить не надо.</span></p>
+  <figure class="vz l" data-vz>
+    <svg class="vz-a" viewBox="0 0 640 400" role="img" aria-label="Окно номер семь закрыто рольставней, на стойке лежит забытый номерок">
+      <rect width="640" height="400" fill="#EEE7FB"/>
+      <rect y="316" width="640" height="84" fill="#F8D26A"/>
+      <rect y="300" width="640" height="22" fill="#F2C44E"/>
+      <g data-v><rect x="168" y="30" width="304" height="274" rx="18" fill="#fff"/><rect x="190" y="52" width="260" height="248" fill="#55555F"/></g>
+      <g stroke="#6F6F7A" stroke-width="5"><path d="M190 88h260M190 124h260M190 160h260M190 196h260M190 232h260M190 268h260"/></g>
+      <rect x="290" y="282" width="60" height="12" rx="6" fill="#F8D26A"/>
+      <g data-v><circle cx="498" cy="72" r="42" fill="#F5806E"/><text x="498" y="74" text-anchor="middle" dominant-baseline="central" font-family="Onest,sans-serif" font-weight="600" font-size="52" fill="#fff">7</text></g>
+      <g data-v><g transform="rotate(-9 106 276)"><rect x="34" y="240" width="144" height="74" rx="10" fill="#fff"/><text x="106" y="278" text-anchor="middle" dominant-baseline="central" font-family="Onest,sans-serif" font-weight="600" font-size="36" fill="#3F4045">А-148</text></g></g>
+      <g data-v><circle cx="568" cy="248" r="18" fill="#55555F"/><path d="M548 304c2-26 10-40 20-40s18 14 20 40z" fill="#F5806E"/></g>
+    </svg>
+    <div class="vz-c">
+      <p class="vz-t">Окно номер семь закрылось</p>
+      <div class="vz-r"><span class="vz-k" style="background:var(--coral)"><svg class="ic"><use href="#person"/></svg></span><span><span class="tw" lang="tr"><i class="r">Sıra</i><i class="c">daki</i>!</span> Следующий!</span></div>
+      <div class="vz-r"><span class="vz-k" style="background:var(--lilac)"><svg class="ic"><use href="#cal"/></svg></span><span><span class="tw" lang="tr"><i class="r">yeni</i> <i class="r">randevu</i></span> нужно записаться заново</span></div>
+    </div>
+  </figure>
   <div class="cheat">
     <div class="ch rv"><h4><svg class="ic"><use href="#arrow"/></svg>Поезд</h4><p>Корень, сколько, чьё, падеж. Порядок один.</p></div>
     <div class="ch rv"><h4><svg class="ic"><use href="#ear"/></svg>Гармония</h4><p>Вагон слушает последнюю гласную. Два варианта или четыре.</p></div>
@@ -1205,6 +1392,7 @@ if(ANIM){
   $$('.count').forEach(function(c){var to=+c.dataset.to,o={v:0};ScrollTrigger.create({trigger:c,start:'top 92%',once:true,onEnter:function(){G.to(o,{v:to,duration:1.5,ease:'power2.out',onUpdate:function(){c.textContent=Math.round(o.v)}})}})});
   var bars=$$('#bars i');if(bars.length){G.fromTo(bars,{scaleY:.04},{scaleY:1,duration:.9,stagger:.12,ease:'power2.out',scrollTrigger:{trigger:'#bars',start:'top 86%',once:true}})}
   G.from('.ha',{y:30,duration:.7,stagger:.1,ease:'power2.out'});
+  $$('[data-vz]').forEach(function(f){var ps=$$('[data-v]',f),ds=$$('[data-draw]',f),sp=$$('[data-spin]',f);ds.forEach(function(d){d.setAttribute('pathLength','1')});ScrollTrigger.create({trigger:f,start:'top 84%',once:true,onEnter:function(){if(ps.length)G.fromTo(ps,{opacity:0,y:20,scale:.92},{opacity:1,y:0,scale:1,duration:.55,stagger:.1,ease:'back.out(1.4)',transformOrigin:'50% 50%',clearProps:'transform,opacity'});ds.forEach(function(d,i){G.fromTo(d,{strokeDasharray:1,strokeDashoffset:1},{strokeDashoffset:0,duration:.9,delay:.2+i*.14,ease:'power2.out',clearProps:'strokeDasharray,strokeDashoffset'})});sp.forEach(function(d){G.fromTo(d,{rotation:+d.dataset.spin,svgOrigin:d.dataset.o},{rotation:0,svgOrigin:d.dataset.o,duration:1.1,delay:.3,ease:'back.out(1.5)'})})}})});
   addEventListener('load',function(){ScrollTrigger.refresh()});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ScrollTrigger.refresh()});
 }
 }
