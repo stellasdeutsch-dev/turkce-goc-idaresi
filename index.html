@@ -601,6 +601,25 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 
 .rshots{columns:1;column-gap:12px;margin-top:24px}.rs{break-inside:avoid;margin:0 0 12px;background:var(--white);border-radius:22px;overflow:hidden;transition:translate .25s,box-shadow .25s}.rs:hover{translate:0 -3px;box-shadow:0 12px 26px rgba(40,50,48,.08)}.rs img{width:100%}.rs span{display:block;padding:10px 16px 12px;font-weight:600}.rs.more{display:none}
 @media(min-width:640px){.rshots{columns:2}}@media(min-width:1024px){.rshots{columns:3}}
+
+.cp{margin-top:72px;padding:20px 22px;border-radius:var(--r);background:var(--mint-t)}
+.cp-m{height:8px;border-radius:99px;background:var(--white);overflow:hidden}
+.cp-m i{display:block;height:100%;border-radius:99px;background:var(--mint-d)}
+.cp p{margin-top:12px;font-size:17px;line-height:1.5}
+.cp strong{font-weight:600}
+.mst{padding-top:64px}
+.mst .wrap{display:grid;justify-items:center;gap:8px}
+.mst-ph{display:block;width:100%;max-width:320px;height:auto}
+.mst-t{justify-self:stretch;padding-bottom:12px}
+.mst-l{margin-top:20px;display:grid;gap:10px;line-height:1.45}
+.mst-l li{display:flex;gap:10px;align-items:flex-start}
+.mst-l .ic{font-size:22px;color:var(--mint-d);margin-top:1px}
+.mst .btn{margin-top:24px}
+@media(min-width:760px){
+  .mst{padding-top:88px}
+  .mst .wrap{grid-template-columns:minmax(0,320px) minmax(0,1fr);justify-items:stretch;align-items:end;gap:52px}
+  .mst-t{padding-bottom:56px}
+}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -700,6 +719,7 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 
 <section id="chto"><div class="wrap">
   <h2>Что это <span class="g">вообще такое</span></h2>
+  <p class="lead">В конце гайда ты вернёшься к окну номер семь. Сотрудник скажет одну фразу про завтра. Поймёшь или нет, станет ясно там.</p>
   <div class="story">
     <p class="rv">Есть миграционная служба. В миграционной службе есть окно. Окно номер семь.</p>
     <p class="rv">В окне сидит сотрудник. Сотрудник не говорит по-русски. По-английски тоже. Сотрудник говорит по-турецки. Очень быстро.</p>
@@ -865,6 +885,8 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
     <div class="swap-g" id="altG"></div>
     <div class="chk" data-a="1"><p class="q">Как сказать мой номер удостоверения: kimlik + numaram?</p><div class="opts"><button class="opt" lang="tr">kimliğ numaram</button><button class="opt" lang="tr">kimlik numaram</button><button class="opt" lang="tr">kimlikim numaram</button></div><div class="why" data-why="За kimlik идёт новое слово, а не гласная. Сдаваться букве незачем."><p></p><div class="ex" style="background:var(--mint-t);margin-top:10px"><button class="say" data-say="Kimlik numaram burada." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr">Kimlik numaram burada.</p><p class="ru">Мой идентификационный номер здесь.</p></div></div></div></div>
   </div>
+
+  <div class="cp"><div class="cp-m" aria-hidden="true"><i style="width:36%"></i></div><p><strong>Больше трети разбора позади.</strong> Поезд собран, гласные выбраны, буквы сменились. Дальше маршрут: куда идти, где стоять, откуда забрать.</p></div>
 
   <div class="step" id="s4">
     <div class="step-h"><span class="num">4</span><h3>Куда, где, откуда</h3></div>
@@ -1072,6 +1094,8 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
     <div class="chk" data-a="0"><p class="q">Пришло SMS: Başvurunuz alınmıştır. Что случилось?</p><div class="opts"><button class="opt" lang="tr">Заявление приняли</button><button class="opt" lang="tr">Заявление потеряли</button><button class="opt" lang="tr">Нужно прийти завтра</button></div><div class="why" data-why="alın это пассив от al, то есть брать. mıştır в официальном письме значит: сделано и зафиксировано."><p></p><div class="ex" style="background:var(--mint-t);margin-top:10px"><button class="say" data-say="Başvurunuz alınmıştır." aria-label="Послушать"><svg class="ic"><use href="#sound"/></svg></button><div><p class="tr" lang="tr">Başvurunuz alınmıştır.</p><p class="ru">Ваше заявление принято.</p></div></div></div></div>
   </div>
 
+  <div class="cp"><div class="cp-m" aria-hidden="true"><i style="width:72%"></i></div><p><strong>Больше двух третей разбора позади.</strong> Пассив, "нужно", "не могу" и времена заявления уже есть. Дальше анкета, которая читается сама, и второй заход к окну.</p></div>
+
   <div class="step" id="s10">
     <div class="step-h"><span class="num">10</span><h3>Порядок слов</h3></div>
     <p class="lead">В русском глагол ходит где хочет. В турецком глагол приходит последним. Как сотрудник на обед: когда все уже на месте.</p>
@@ -1199,6 +1223,18 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
   <div class="xs-end" id="xEnd"></div>
 </div></section>
 
+<section class="mst"><div class="wrap">
+  <img class="mst-ph" src="media/ph-bridge.webp" alt="" width="352" height="511" loading="lazy">
+  <div class="mst-t">
+    <h2>Окно закрылось. <span class="g">Завтра приходить не надо.</span></h2>
+    <ul class="mst-l">
+      <li><svg class="ic"><use href="#tick"/></svg><span><span class="tw" lang="tr">Belgelerinizi</span> теперь поезд: корень, сколько, чьё, падеж.</span></li>
+      <li><svg class="ic"><use href="#tick"/></svg><span>Слышишь <span class="tw" lang="tr">almanız gerekiyor</span> и понимаешь, что от тебя хотят.</span></li>
+    </ul>
+    <p class="lead">Это была одна тема. Остальные на платформе: 128 гайдов, 131 блок лексики, 1716 материалов. $30 один раз.</p>
+    <a class="btn yel" href="#alterna">Смотреть, что внутри <svg class="ic"><use href="#arrow"/></svg></a>
+  </div>
+</div></section>
 <section id="alterna"><div class="wrap">
   <div class="ad-unmask">
     <h2>Окна номер семь <span>не существует</span></h2>
