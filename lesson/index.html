@@ -620,6 +620,18 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
   .mst .wrap{grid-template-columns:minmax(0,320px) minmax(0,1fr);justify-items:stretch;align-items:end;gap:52px}
   .mst-t{padding-bottom:56px}
 }
+
+/* photos */
+.ha{overflow:hidden}.ha img.cut{position:absolute;bottom:0;left:50%;translate:-50% 0;width:112%;max-width:none;height:auto}
+.ha img.side{width:auto;height:58%;left:0;translate:-8% 0}.ha.y img.side{left:auto;right:0;translate:22% 0;height:52%}
+.ha .vt{bottom:auto;top:16px}
+.cd-t{height:168px;display:block}.cd-t img{position:absolute;bottom:0;left:50%;translate:-50% 0;height:94%;width:auto;max-width:100%;object-fit:contain;object-position:50% 100%}
+.colr{padding-bottom:178px}.colr img.cut{position:absolute;right:-6px;bottom:0;width:auto;height:168px;max-width:70%;object-fit:contain;object-position:100% 100%}
+.ban{overflow:visible}.ban-img{display:block;width:210px;height:auto;margin:-96px auto 6px}
+.ad-unmask img.cut{position:absolute;right:-12px;bottom:0;width:min(66%,440px);height:auto}.ad-unmask p:last-of-type{padding-bottom:170px}
+@media(min-width:1024px){.ban-img{position:absolute;right:44px;top:-70px;width:330px;margin:0}.ban h3,.ban>p{max-width:520px}.ad-unmask p:last-of-type{padding-bottom:0}.ad-unmask h2,.ad-unmask p{max-width:560px}.colr{padding-bottom:190px}.colr img.cut{height:184px}.cd-t{height:190px}}
+.ban-img{position:relative;z-index:0}.ban h3,.ban>p,.bar-f,.keys,.res-out{position:relative;z-index:1}
+@media(min-width:1024px){.ban-img{position:absolute;width:250px;top:-96px;right:56px}}
 </style>
 <script defer src="../assets/gsap-bundle.min.js"></script>
 </head>
@@ -711,9 +723,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
     <div class="btns"><a class="btn mint" href="#chto">Начать разбор <svg class="ic"><use href="#arrow"/></svg></a><a class="btn yel" href="#test">Сразу к упражнениям</a></div>
   </div>
   <div class="hero-art" aria-hidden="true">
-    <div class="ha m"><svg class="art a1" viewBox="0 0 200 250" aria-hidden="true"><use href="#a-pass"/></svg><svg class="art a2" viewBox="0 0 170 130" aria-hidden="true"><use href="#a-ticket"/></svg></div>
-    <div class="ha l"><svg class="art a3" viewBox="0 0 190 240" aria-hidden="true"><use href="#a-form"/></svg><span class="vt">окно номер 7</span></div>
-    <div class="ha y"><svg class="art a4" viewBox="0 0 230 150" aria-hidden="true"><use href="#a-id"/></svg><span class="vt">без переводчика</span></div>
+    <div class="ha m"><img class="cut" src="../media/pet-corgi.webp" alt="" width="900" height="877" fetchpriority="high" decoding="async"></div>
+    <div class="ha l"><img class="cut side" src="../media/pet-cat-stamp.webp" alt="" width="900" height="631" decoding="async"><span class="vt">окно номер 7</span></div>
+    <div class="ha y"><img class="cut side" src="../media/pet-retriever.webp" alt="" width="863" height="900" decoding="async"><span class="vt">без переводчика</span></div>
   </div>
 </div></section>
 
@@ -731,9 +743,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
   </div>
   <p class="lead">Официальный турецкий это тот же турецкий, только без улыбки. Кубиков в нём мало. Повторяются они постоянно.</p>
   <div class="cards c3">
-    <div class="cd rv"><div class="cd-t c"><svg class="art " viewBox="0 0 170 130" aria-hidden="true"><use href="#a-ticket"/></svg></div><h4>Слово растёт хвостом</h4><p>Вместо предлогов и местоимений у слова появляются вагоны. Одно слово часто равно целой русской фразе.</p></div>
-    <div class="cd rv"><div class="cd-t m"><svg class="art " viewBox="0 0 230 180" aria-hidden="true"><use href="#a-folder"/></svg></div><h4>Падеж показывает маршрут</h4><p>Куда идти, где стоять, откуда забрать. Всё это один маленький хвостик.</p></div>
-    <div class="cd rv"><div class="cd-t l"><svg class="art " viewBox="0 0 190 240" aria-hidden="true"><use href="#a-form"/></svg></div><h4>Никто ничего не делает</h4><p>Анкета заполняется. Документ подаётся. Кто всё это делает? Ты. Но тебе об этом не скажут.</p></div>
+    <div class="cd rv"><div class="cd-t c"><img class="cut" src="../media/pet-retriever.webp" alt="" width="863" height="900" loading="lazy" decoding="async"></div><h4>Слово растёт хвостом</h4><p>Вместо предлогов и местоимений у слова появляются вагоны. Одно слово часто равно целой русской фразе.</p></div>
+    <div class="cd rv"><div class="cd-t m"><img class="cut" src="../media/pet-chihuahua.webp" alt="" width="900" height="784" loading="lazy" decoding="async"></div><h4>Падеж показывает маршрут</h4><p>Куда идти, где стоять, откуда забрать. Всё это один маленький хвостик.</p></div>
+    <div class="cd rv"><div class="cd-t l"><img class="cut" src="../media/pet-cat-stamp.webp" alt="" width="900" height="631" loading="lazy" decoding="async"></div><h4>Никто ничего не делает</h4><p>Анкета заполняется. Документ подаётся. Кто всё это делает? Ты. Но тебе об этом не скажут.</p></div>
   </div>
   <p class="lead">На этой странице у каждого кубика свой цвет:</p>
   <div class="legend">
@@ -744,9 +756,9 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
 <section id="zachem"><div class="wrap">
   <h2>Зачем <span class="g">тебе это</span></h2>
   <div class="cards c3">
-    <div class="colr m rv"><h3>Слышишь, что просят</h3><p>Сотрудник говорит одну длинную фразу. Внутри неё твой следующий шаг.</p><svg class="art " viewBox="0 0 260 200" aria-hidden="true"><use href="#a-window"/></svg></div>
-    <div class="colr l rv"><h3>Читаешь без переводчика</h3><p>SMS, письмо, статус заявления. Там всё написано. Просто аффиксами.</p><svg class="art " viewBox="0 0 210 160" aria-hidden="true"><use href="#a-mail"/></svg></div>
-    <div class="colr c rv"><h3>Приходишь один раз</h3><p>Про недостающую бумажку говорят один раз. Потом снова очередь.</p><svg class="art " viewBox="0 0 180 200" aria-hidden="true"><use href="#a-clock"/></svg></div>
+    <div class="colr m rv"><h3>Слышишь, что просят</h3><p>Сотрудник говорит одну длинную фразу. Внутри неё твой следующий шаг.</p><img class="cut" src="../media/pet-corgi.webp" alt="" width="900" height="877" loading="lazy" decoding="async"></div>
+    <div class="colr l rv"><h3>Читаешь без переводчика</h3><p>SMS, письмо, статус заявления. Там всё написано. Просто аффиксами.</p><img class="cut" src="../media/pet-cat-stamp.webp" alt="" width="900" height="631" loading="lazy" decoding="async"></div>
+    <div class="colr c rv"><h3>Приходишь один раз</h3><p>Про недостающую бумажку говорят один раз. Потом снова очередь.</p><img class="cut" src="../media/pet-kitten.webp" alt="" width="900" height="537" loading="lazy" decoding="async"></div>
   </div>
   <a class="note rv" href="https://www.goc.gov.tr" target="_blank" rel="noopener"><span class="ni"><svg class="ic"><use href="#doc"/></svg></span><span>Суммы, сроки и списки документов я здесь не пишу. Они меняются. Их смотри на <b>goc.gov.tr</b> и <b>turkiye.gov.tr</b>. Здесь только язык.</span></a>
   <h3 class="mt2">Двенадцать слов <span class="g">без которых дальше никак</span></h3>
@@ -854,6 +866,7 @@ h1,h2,h3,.bridge,.big-p,.ps{hyphens:manual}
       </div>
     </figure>
     <div class="ban m">
+      <img class="ban-img" src="../media/pet-chihuahua.webp" alt="" width="900" height="784" loading="lazy" decoding="async">
       <h3>Проверь <span class="g2">любое слово</span></h3>
       <p>Впиши турецкое слово. Последняя гласная сама выберет вагон.</p>
       <form class="bar-f" id="hf" autocomplete="off">
